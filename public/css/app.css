@@ -1,0 +1,131 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* --- 1. ATMOSPHERE & COLOR PHYSICS --- */
+body {
+    background-color: #FDFBF7;
+    color: #1A1A1A;
+}
+
+.grain-overlay {
+    position: fixed;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwBAMAAAClLOS0AAAAElBMVEUAAAD8/vz08/b5+fnu7u7g4OCe8clcAAAAd0lEQVR42mP4z8AYslBEQkBEQkBEAEVCREQARUREREREBEQEREQEREQARUREREREBEQEREQEREQARUREREREBEQEREQEREQARUREREREBEQEREQEREQARUREREREBEQEREQEREQARUREREREBEQEREQEREQARUREREREBEQEREQEGETgAkxYJVo7y55kAAAAAElFTkSuQmCC');
+    opacity: 0.06;
+    pointer-events: none;
+    z-index: -9;
+}
+
+.iridescent-flares {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: -10;
+    mix-blend-mode: multiply; /* This is the key effect */
+}
+
+.iridescent-flares > div {
+    position: absolute;
+    filter: blur(100px);
+    opacity: 0.6;
+}
+
+.flare-orange {
+    top: -10%;
+    left: -10%;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, #FF6B00, transparent 60%);
+}
+
+.flare-indigo {
+    bottom: -15%;
+    right: -15%;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, #4F46E5, transparent 70%);
+}
+
+.flare-teal {
+    bottom: 20%;
+    left: 5%;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, #0D9488, transparent 65%);
+}
+
+
+/* --- 2. TYPOGRAPHY --- */
+.font-serif {
+    font-family: 'Playfair Display', serif;
+    font-weight: 900; /* Black weight */
+}
+
+.font-sans {
+    font-family: 'Inter', sans-serif;
+}
+
+.font-mono {
+    font-family: 'JetBrains Mono', monospace;
+    color: #1A1A1A;
+}
+
+/* --- 3. UI COMPONENTS (Light Theme) --- */
+.command-palette-overlay {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(253, 251, 247, 0.7);
+    backdrop-filter: blur(5px);
+    z-index: 100;
+}
+
+.command-palette {
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    width: 500px;
+    max-width: 90%;
+    padding: 1rem;
+    z-index: 101;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.command-palette input {
+    background-color: transparent;
+    border: none;
+    color: #1A1A1A;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 1rem;
+    width: 100%;
+    padding: 0.5rem;
+    outline: none;
+}
+
+.command-palette ul {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0 0;
+}
+
+.command-palette li a {
+    display: block;
+    padding: 0.5rem;
+    color: #4b5563;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+    font-family: 'JetBrains Mono', monospace;
+    border-radius: 4px;
+}
+
+.command-palette li a:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+    color: black;
+}
+
+.hidden {
+    display: none;
+}
