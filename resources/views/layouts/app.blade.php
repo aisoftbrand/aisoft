@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>AISOFT - Xtract</title>
+    <title>AISOFT - AISOFT</title>
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -66,6 +66,8 @@
     </style>
 </head>
 <body style="background: #03000a;" class="text-white min-h-screen relative selection:bg-purple-500 font-sans">
+
+    <x-header />
 
     <div id="canvas-container"></div>
     <div class="spotlight"></div>

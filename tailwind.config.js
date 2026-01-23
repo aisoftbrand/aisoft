@@ -2,6 +2,7 @@
 const defaultTheme = require('tailwindcss/defaultTheme');
 
 module.exports = {
+    darkMode: "class",
     content: [
         './vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php',
         './storage/framework/views/*.php',
@@ -10,18 +11,21 @@ module.exports = {
 
     theme: {
         extend: {
+            colors: {
+                "primary": "#9d25f4",
+                "background-light": "#f7f5f8",
+                "background-dark": "#050208",
+                "deep-indigo": "#1a1022",
+            },
             fontFamily: {
-                sans: ['Figtree', ...defaultTheme.fontFamily.sans],
+                "display": ["Space Grotesk", "sans-serif"]
             },
-            keyframes: {
-                fadeIn: {
-                    'from': { opacity: '0', transform: 'translateY(20px)' },
-                    'to': { opacity: '1', transform: 'translateY(0)' },
-                }
+            borderRadius: {
+                "DEFAULT": "0.5rem",
+                "lg": "1rem",
+                "xl": "1.5rem",
+                "full": "9999px"
             },
-            animation: {
-                'fade-in': 'fadeIn 0.8s ease-out forwards',
-            }
         },
     },
 

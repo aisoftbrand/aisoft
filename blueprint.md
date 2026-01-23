@@ -1,33 +1,23 @@
-# AISOFT Application Blueprint
+# Project Blueprint
 
 ## Overview
 
-AISOFT is a cutting-edge web application designed to showcase advanced software development capabilities. The application features a dynamic, interactive hero section with an "Xtract" dark theme.
+This project is a full-stack web application built with the Laravel framework. It aims to create a modern, performant, and secure application by leveraging Laravel's powerful features for routing, data handling, and backend logic.
 
-## Current Design: Xtract
+## Design and Features
 
-- **Theme:** A modern, dark theme with a black background and white text.
-- **Palette:**
-  - **Background:** `bg-black`.
-  - **Text:** `text-white`.
-  - **Accent:** `bg-purple-600` for buttons and highlights.
-- **Visual Engine:**
-  - **Background Blur:** Purple and fuchsia circular blurs create a sense of depth and vibrancy.
-- **Interactivity:**
-  - **Floating Navbar:** A glassmorphic navbar that stays at the top of the page.
-  - **Animated Hero:** The hero section elements fade in on page load.
-  - **Hover Effects:** Buttons and links have subtle hover effects.
-- **Typography:** 
-  - **Font:** "Figtree".
+### General
 
-## Implemented Features
+- **Backend:** PHP with Laravel
+- **Frontend:** Blade templating engine
+- **Styling:** Tailwind CSS
+- **Fonts:** Space Grotesk
+- **Icons:** Material Symbols
 
-- "Xtract" dark theme with a black background and white text.
-- Purple and fuchsia background blur effects.
-- Floating glassmorphic navbar.
-- Animated hero section with gradient text.
-- Call-to-action buttons with hover effects.
+### Implemented Features
 
-## Current Plan: None
+- **Our Services Section:** A modern, interactive section that showcases the services offered. It features a glassmorphism design with a background mesh, a header, filter chips, a circular selector with orbiting icons, and an interactive technology matrix. This replaces the previous, simpler design.
 
-The "Xtract" theme implementation is complete. Awaiting further instructions.
+## Current Plan
+
+- **Update "Our Services" Section:** The current task was to replace the old "Our Services" section with a new, more modern design. This involved updating the HTML, CSS, main layout, and Tailwind configuration. This has been completed.
