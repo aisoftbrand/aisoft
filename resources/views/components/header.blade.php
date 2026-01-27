@@ -3,7 +3,8 @@
         <svg class="w-6 h-6 text-white" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 7l10 5 10-5-10-5zm0 9l2.5-1.25L12 8.5l-2.5 1.25L12 11zm0 2.5l-5-2.5-5 2.5 10 5 10-5-5-2.5-5 2.5z"/></svg>
         AISOFT
     </a>
-    <div class="hidden md:flex gap-8 text-sm font-medium text-gray-300">
+    <div class="md:flex gap-8 text-sm font-medium text-gray-300">
+        <a href="/" class="hover:text-white transition">Home</a>
         <a href="/about" class="hover:text-white transition">About</a>
         <a href="/classifieds" class="hover:text-white transition">Classifieds</a>
         <a href="/blog" class="hover:text-white transition">Blog</a>

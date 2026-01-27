@@ -4,21 +4,31 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>AISOFT - AISOFT</title>
+    <title>AISOFT - Intelligent Automation</title>
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Figtree:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
 
     <!-- Scripts for 3D Background -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/simplex-noise@2.4.0/simplex-noise.min.js"></script>
 
     <!-- Styles & Scripts -->
+    <link href="{{ asset('css/aisoft.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/our-services.css') }}" rel="stylesheet">
     @vite(['resources/css/app.css', 'resources/js/app.js'])
+    @stack('styles')
     
     <style>
+        /* Base body background */
+        body {
+            background-color: #03000a;
+        }
+
+        /* Spotlight effects for the hero section */
         .spotlight {
             position: absolute;
             top: -100px;
@@ -44,38 +54,38 @@
             filter: blur(80px);
         }
 
-        .metallic-text {
-            color: white; 
-            background-image: linear-gradient(
-                180deg, 
-                #FFFFFF 10%,
-                #93C5FD 55%,
-                #7C3AED 90%
-            );
-            background-clip: text;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            filter: drop-shadow(0px 2px 0px rgba(0,0,0,0.5));
-        }
-
+        /* Animated 3D background canvas */
         #canvas-container {
-            position: fixed; top: 0; left: 0; width: 100%; height: 100vh; z-index: 0;
+            position: fixed; 
+            top: 0; 
+            left: 0; 
+            width: 100%; 
+            height: 100vh; 
+            z-index: 0; /* Ensures it's behind all content */
             mask-image: linear-gradient(to bottom, black 40%, transparent 100%);
             -webkit-mask-image: linear-gradient(to bottom, black 40%, transparent 100%);
         }
     </style>
 </head>
-<body style="background: #03000a;" class="text-white min-h-screen relative selection:bg-purple-500 font-sans">
+<body class="text-white min-h-screen relative selection:bg-purple-500 font-sans">
 
     <x-header />
 
+    <!-- Background visuals that stay behind content -->
     <div id="canvas-container"></div>
     <div class="spotlight"></div>
     <div class="spotlight-core"></div>
 
-    @yield('content')
+    <!-- Main content wrapper with positioning context -->
+    <main class="relative z-10 w-full overflow-x-hidden">
+        @yield('content')
+    </main>
+    
+    <script src="{{ asset('js/app.js') }}"></script>
+    <script src="{{ asset('js/our-services.js') }}"></script>
 
     <script>
+        // Your existing Three.js background animation script
         document.addEventListener('DOMContentLoaded', () => {
             const CONFIG = { 
                 gridSize: 50, 
@@ -133,5 +143,6 @@
             });
         });
     </script>
+    @stack('scripts')
 </body>
 </html>

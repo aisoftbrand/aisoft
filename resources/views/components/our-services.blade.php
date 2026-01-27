@@ -1,4 +1,4 @@
-<main class="relative min-h-screen overflow-hidden bg-gradient-to-b from-background-dark via-deep-indigo to-background-dark">
+<section class="relative min-h-screen overflow-hidden bg-gradient-to-b from-background-dark via-deep-indigo to-background-dark">
 <!-- Background Wireframe Mesh -->
 <div class="absolute inset-0 wireframe-bg opacity-30 pointer-events-none"></div>
 <div class="absolute top-1/4 -left-20 w-96 h-96 bg-primary/20 rounded-full blur-[120px]"></div>
@@ -219,7 +219,7 @@ function activateService(service) {
     node.classList.toggle("bg-primary/20", active);
     node.classList.toggle("border-primary/50", active);
     node.classList.toggle("bg-white/5", !active);
-    node.classList.toggle("border-white/10", !active);
+    node.classList.toggle('border-white/10', !active);
 
   });
 }
@@ -227,4 +227,4 @@ function activateService(service) {
 orbits.forEach(o => o.addEventListener("click", () => activateService(o.dataset.service)));
 chips.forEach(c => c.addEventListener("click", () => activateService(c.dataset.service)));
 </script>
-</main>
+</section>

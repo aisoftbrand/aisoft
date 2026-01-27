@@ -16,6 +16,27 @@ body {
     font-family: 'Roboto Mono', monospace;
 }
 
+.metallic-text {
+    background: linear-gradient(135deg, #ffee00, #ff0033, #ff00c8);
+    background-size: 400% 400%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: metallic-gradient 8s ease infinite;
+}
+
+@keyframes metallic-gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
 .typewriter h1 {
     overflow: hidden; /* Ensures the content is not revealed until the animation */
     border-right: .15em solid orange; /* The typwriter cursor */
